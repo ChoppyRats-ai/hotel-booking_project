@@ -1,0 +1,53 @@
+[tool.poetry]
+name = "hotel_project"
+version = "0.1.0"
+description = "Hotel management system"
+authors = ["Your Name <your.email@example.com>"]
+package-mode = false
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.2"
+djangorestframework = "^3.14.0"
+psycopg2-binary = "^2.9.9"
+python-dotenv = "^1.0.0"
+gunicorn = "^21.2.0"
+pre-commit = "^4.2.0"
+ruff = "^0.11.5"
+pydantic-settings = "^2.8.1"
+ipython = "^9.1.0"
+django-extensions = "^4.1"
+djoser = "^2.3.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0"
+pytest-django = "^4.8.0"
+pytest-cov = "^4.1.0"
+ruff = "^0.11.5"
+pre-commit = "^4.2.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 88
+exclude = [
+    ".venv/*",
+    "venv/*"
+]
+
+[tool.ruff.lint]
+select = ["E", "F"]
+
+[tool.ruff.isort]
+known-first-party = ["hotel"]
+
+[tool.pytest.ini_options]
+DJANGO_SETTINGS_MODULE = "hotel.settings"
+python_files = ["test_*.py", "*_test.py"]
+addopts = "-v -s --doctest-modules"
+testpaths = ["src/tests"]
+pythonpath = [
+    "src"
+] 

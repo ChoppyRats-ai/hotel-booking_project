@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.env
+venv/
+
+# IDE
+.idea/
+.vscode/
+
+# Django
+*.log
+db.sqlite3
+
+# Tests
+.coverage
+.pytest_cache/
+
+# Docker
+postgres_data/
+
+*.pyc
+.python-version
+.env.local
+.env.*.local
+
+.tox/
+.nox/
+.coverage.*
+.cache
+
+.docker/
+docker-compose.override.yml
+
+.DS_Store
+Thumbs.db 
